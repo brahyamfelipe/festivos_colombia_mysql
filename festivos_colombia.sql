@@ -139,6 +139,8 @@ SELECT CASE WHEN DAYOFWEEK(dia_indepedencia_cartagena) = 2 THEN DATE_FORMAT(dia_
             WHEN DAYOFWEEK(dia_indepedencia_cartagena) = 1 THEN DATE_FORMAT(DATE_ADD(dia_indepedencia_cartagena,INTERVAL 1 DAY),'%m%D') END INTO indepedencia_cartagena;
 
 
+-- CALCULO DIA DE PASCUA
+
 SET a = mod(anio,19);
 SET b = TRUNCATE(anio/100,0);
 SET c = mod(anio,100);
